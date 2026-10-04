@@ -15,41 +15,6 @@ Autonomous navigation on the lunar surface is challenging due to craters, irregu
 
 The system uses high-resolution Chandrayaan-2 imagery for crater detection and TMC-2 terrain data for geospatial mapping and elevation-aware path planning.
 
-## Project Pipeline
-
-```text
-Chandrayaan-2 Datasets
-        │
-        ├── OHRC Images
-        │       ↓
-        │   Dataset Preparation
-        │       ↓
-        │   YOLOv5 / YOLOv8 Training
-        │       ↓
-        │   Crater Detection
-        │
-        └── TMC-2 Ortho + DTM
-                ↓
-        Terrain & Elevation Data
-                │
-                ↓
-       Coordinate Transformation
-                │
-                ↓
-       GeoPackage (.gpkg)
-                │
-                ↓
-       PyQt + QGIS Application
-                │
-                ↓
-       User-defined Navigation Points
-                │
-                ↓
-       Elevation-Aware A* Algorithm
-                │
-                ↓
-          Safe Rover Path
-
 
 ## Objectives
 
@@ -264,3 +229,39 @@ Future improvements could focus on:
 - Incorporating real-time rover imagery for route validation.
 - Automatically identifying scientifically significant navigation targets.
 - Exploring hybrid and more advanced path-planning algorithms.
+
+
+## Project Pipeline
+
+```text
+Chandrayaan-2 Datasets
+        │
+        ├── OHRC Images
+        │       ↓
+        │   Dataset Preparation
+        │       ↓
+        │   YOLOv5 / YOLOv8 Training
+        │       ↓
+        │   Crater Detection
+        │
+        └── TMC-2 Ortho + DTM
+                ↓
+        Terrain & Elevation Data
+                │
+                ↓
+       Coordinate Transformation
+                │
+                ↓
+       GeoPackage (.gpkg)
+                │
+                ↓
+       PyQt + QGIS Application
+                │
+                ↓
+       User-defined Navigation Points
+                │
+                ↓
+       Elevation-Aware A* Algorithm
+                │
+                ↓
+          Safe Rover Path
